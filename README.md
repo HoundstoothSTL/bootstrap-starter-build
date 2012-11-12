@@ -34,6 +34,12 @@ Throw this guy anywhere on your machine ( typically under ~/.sh folder ), cd int
 
 Then try again.
 
+## Planned Features
+
+*    Prompt for installation of system dependencies
+*    Package management via Twitter Bower
+*    Include .aliases doc for shortcuts
+
 ## Changelog
 
 **V1.0.0**
