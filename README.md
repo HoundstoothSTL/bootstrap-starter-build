@@ -33,3 +33,9 @@ Throw this guy anywhere on your machine ( typically under ~/.sh folder ), cd int
      chmod +x bootstart.sh
 
 Then try again.
+
+## Changelog
+
+**V1.0.0**
+
+*    Initial Push
