@@ -36,11 +36,15 @@ Then try again.
 
 ## Planned Features
 
-*    Prompt for installation of system dependencies
 *    Package management via Twitter Bower
 *    Include .aliases doc for shortcuts
 
 ## Changelog
+
+**V1.2.0**
+
+*    Colorized Prompts for easier process
+*    Built in dependency check and package builds
 
 **V1.0.0**
 

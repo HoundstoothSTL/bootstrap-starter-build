@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Version 1.2.0
+
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 CYAN="\033[1;36m"
 LIGHTRED="\033[1;31m"
