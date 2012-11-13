@@ -17,10 +17,14 @@ The script will ask a few questions and then build out a LESS or non-LESS Bootst
 
 **Requirements**:
 
+*    This version runs on OSX only
 *    You have to have package management somewhere on your machine, if not, we'll make it for you
-*    You must have Git installed
-*    You must have wget installed - using homebrew -> `brew install wget`
-*    You must have grunt installed - using NPM -> `npm install -g grunt`
+*    XCode - App Store
+*    Node - http://nodejs.org
+*    NPM - https://npmjs.org/doc/install.html
+*    Git - using homebrew -> `brew install git`
+*    Wget - using homebrew -> `brew install wget`
+*    Grunt - using NPM -> `npm install -g grunt`
 
 **How to Use**:
 ---
@@ -41,7 +45,7 @@ Then try again.
 
 ## Changelog
 
-**V1.2.0**
+**V1.1.0**
 
 *    Colorized Prompts for easier process
 *    Built in dependency check and package builds

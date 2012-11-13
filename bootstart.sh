@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version 1.2.0
+# Version 1.1.0
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 CYAN="\033[1;36m"
