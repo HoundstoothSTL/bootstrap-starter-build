@@ -18,7 +18,7 @@ The script will ask a few questions and then build out a LESS or non-LESS Bootst
 **Requirements**:
 
 *    This version runs on OSX only
-*    You have to have package management somewhere on your machine, if not, we'll make it for you
+*    You have to have package management somewhere on your machine, don't worry, we can create it for you.
 *    XCode - App Store
 *    Node - http://nodejs.org
 *    NPM - https://npmjs.org/doc/install.html
