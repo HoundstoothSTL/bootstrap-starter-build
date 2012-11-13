@@ -252,7 +252,7 @@ then
 	cd $packageFolder/bootstrap
 	cp -r js/*.js $projectPath/$projectName/scripts/vendor/bootstrap/
 	cd $projectPath/$projectName/scripts/vendor/bootstrap/
-	cat *.js | grep -Ev "#include" > ../bootstrap.js
+	cat *.js | grep -Ev "#include" > $projectPath/$projectName/scripts/vendor/bootstrap.js
 fi
 
 cd $projectPath/$projectName/scripts && touch app.js
