@@ -1,49 +1,62 @@
-Bootstrap Starter Build Script
+Bootstrap Project Build Script
 =======================
 
-## Build out a new Bootstrap Scaffold using a simple shell script.
+### Build out a new Bootstrap Scaffold using a simple shell script.
 
-The script will ask a few questions and then build out a LESS or non-LESS Bootstrap scaffold based on your answers.
+The script will ask a few questions and then build out a LESS or non-LESS Bootstrap scaffold based on your answers.  This is a complete rewrite from version 1.0.  Version 2.0 utilizes a system audit to check your setup for neccessary packages like Node and Grunt as well as an installer for missing packages.  Some may notice that the audit is similar to the Yeoman audit and that is because it is similar, thanks to Yeoman for the idea for the check script.
 
-**Questions are**:
+Version 2.0 utilizes the Twitter Bower package registry to load javascript packages like jQuery and Modernizr.
+
+**Build Questions**:
 
 *    What is the base path for your projects (absolute path, no trailing slashes please)? - You'd answer `/Users/USERNAME/Sites` or what have you
 *    What is our new Bootstrap project name? - You'd answer, whatever you want it to be called, no spaces
 *    Are we using the Bootstrap LESS files? (y/n)
 *    Are we using the Bootstrap JavaScript files? (y/n)
-*    Do you have a packages directory already for bootstrap, jQuery and Modernizr? (y/n) ?  - If not we'll build it for you
-	 *    Where do you want your packages directory (absolute path, no trailing slashes) ?
-*    Where do you keep your packages (absolute path, no trailing slashes)?
 
 **Requirements**:
 
 *    This version runs on OSX only
-*    You have to have package management somewhere on your machine, don't worry, we can create it for you
-*    XCode - App Store
-*    Node - http://nodejs.org
-*    NPM - https://npmjs.org/doc/install.html
-*    Git - using homebrew -> `brew install git`
-*    Wget - using homebrew -> `brew install wget`
-*    Grunt - using NPM -> `npm install -g grunt`
+*    XCode - Xcode must be pre-installed to use the build script
+*	 Homebrew - built using Ruby -> `ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"`
+*    Node - built using Homebrew -> `brew install node`
+*    Git - built using homebrew -> `brew install git`
+*    Grunt - built using NPM -> `npm install grunt -g`
+*    Bower - built using NPM -> `npm install bower -g`
 
 **How to Use**:
 ---
-Throw this guy anywhere on your machine ( typically under ~/.sh folder ), cd into that directory and then run:
+Clone the repo into any directory (we like ~/.sh for our shell scripts):
 
-     ./bootstart.sh
+`https://github.com/HoundstoothSTL/bootstrap-starter-build.git`
 
- If that doesn't work, recompile it by running 
+Navigate to the directoy through terminal and run:
 
-     chmod +x bootstart.sh
+     `./check.sh`
 
-Then try again.
+The 'check' script will run an audit against your system to make sure you have the necessary packages and dependencies mentioned above.  
+
+If you are all good, it will move straight to the build script, ask a few simple questions and scaffold out a new Bootstrap project with all dependencies managed nicely through Bower.  
+
+If the system audit finds that you are missing a required package, it will ask if you would like the script to install the missing packages for you, or give you options to do it yourself.
+
+Once you have run the check once and have everything you need, you can simply run the build script itself from there on out:
+	
+	`./build.sh`
 
 ## Planned Features
 
-*    Package management via Twitter Bower
-*    Include .aliases doc for shortcuts
+*    Include dotfiles for shortcuts and accurate colorizing.
 
 ## Changelog
+
+**V2.0.0**
+
+*    Integrated Twitter Bower for package management
+*    Built system audit check (based on the Yeoman audit)
+*    Built installer for missing dependencies
+*    Re-structure of scaffold to account for Bower's "components" directory
+*    Various copy changes and style changes
 
 **V1.1.0**
 
