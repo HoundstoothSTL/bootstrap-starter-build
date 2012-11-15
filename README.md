@@ -28,11 +28,11 @@ Version 2.0 utilizes the Twitter Bower package registry to load javascript packa
 ---
 Clone the repo into any directory (we like ~/.sh for our shell scripts):
 
-`https://github.com/HoundstoothSTL/bootstrap-starter-build.git`
+     https://github.com/HoundstoothSTL/bootstrap-starter-build.git
 
 Navigate to the directoy through terminal and run:
 
-     `./check.sh`
+     ./check.sh
 
 The 'check' script will run an audit against your system to make sure you have the necessary packages and dependencies mentioned above.  
 
@@ -42,7 +42,7 @@ If the system audit finds that you are missing a required package, it will ask i
 
 Once you have run the check once and have everything you need, you can simply run the build script itself from there on out:
 	
-	`./build.sh`
+	./build.sh
 
 ## Planned Features
 
