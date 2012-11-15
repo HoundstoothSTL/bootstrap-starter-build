@@ -144,8 +144,10 @@ dep_install() {
 	  	echo -e $M"Installing Node... "
 	  	echo ""
 	  	brew install node
+      echo -e $M"Installing Node Package Manager"
 	  	sudo curl -O http://npmjs.org/install.sh | sh
-		echo -e $M"Installing Node Package Manager"
+      export NODE_PATH="/usr/local/lib/node"
+      export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
     fi
 
     if [[ "$grunt" = 0 ]]; then
@@ -277,7 +279,19 @@ sysaudit() {
 echo -e $M""
 echo "Hello, I am the installer"
 echo ""
-echo "You will need your password for some of these... "
 
-dep_install
-sysaudit
+installYN= 
+while [ -z $installYN ]
+do 
+  echo -e -n $QMARK'[?] '$Q'This installer will use Homebrew to install packages, you will need your password for the install, type "y" when you are ready to proceed ' $YN'(y/n) '
+  read installYN
+done
+
+if [[ "$installYN" =~ ^[Yy]$ ]]
+then
+  dep_install
+  sysaudit
+else
+  echo -e $M"No problem, feel free to do the install manually if you like"
+  exit
+fi

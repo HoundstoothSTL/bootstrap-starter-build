@@ -50,6 +50,12 @@ Once you have run the check once and have everything you need, you can simply ru
 
 ## Changelog
 
+**V2.0.1**
+
+*    Fixed node $PATH issue
+*    Fixed npm $PATH issue (since homebrew doesn't install npm anymore)
+*    Added a "proceed" prompt before the installer runs
+
 **V2.0.0**
 
 *    Integrated Twitter Bower for package management
