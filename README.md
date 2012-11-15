@@ -28,7 +28,7 @@ Version 2.0 utilizes the Twitter Bower package registry to load javascript packa
 ---
 Clone the repo into any directory (we like ~/.sh for our shell scripts):
 
-     https://github.com/HoundstoothSTL/bootstrap-starter-build.git
+     git clone https://github.com/HoundstoothSTL/bootstrap-starter-build.git
 
 Navigate to the directoy through terminal and run:
 
