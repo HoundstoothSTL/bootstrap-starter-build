@@ -147,7 +147,7 @@ dep_install() {
       echo -e $M"Installing Node Package Manager"
 	  	sudo curl -O http://npmjs.org/install.sh | sh
       export NODE_PATH="/usr/local/lib/node"
-      export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+      export PATH="/usr/local/share/npm/bin:$PATH"
     fi
 
     if [[ "$grunt" = 0 ]]; then
