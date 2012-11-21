@@ -68,9 +68,9 @@ cd $projectPath/$projectName/app && mkdir styles scripts images ico && cd script
 
 cp $projectPath/$projectName/components/jquery/jquery.min.js $projectPath/$projectName/app/scripts/vendor/jquery.min.js
 
-cd $projectPath/$projectName/components/modernizr && grunt
+cd $projectPath/$projectName/components/modernizr
 
-cp $projectPath/$projectName/components/modernizr/modernizr.min.js $projectPath/$projectName/app/scripts/vendor/modernizr.min.js
+cp $projectPath/$projectName/components/modernizr/modernizr.js $projectPath/$projectName/app/scripts/vendor/modernizr.js
 
 if [[ "$lessCSS" =~ ^[Yy]$ ]]
 then
@@ -99,6 +99,7 @@ then
 fi
 
 cd $projectPath/$projectName/app/scripts && touch app.js
+
 cp $DIR/_templates/index.html $projectPath/$projectName/app/index.html
 
 echo -e $WHITE"\n==============================================================================\n"
