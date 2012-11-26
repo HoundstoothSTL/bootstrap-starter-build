@@ -50,6 +50,10 @@ Once you have run the check once and have everything you need, you can simply ru
 
 ## Changelog
 
+**V2.0.2**
+
+*    Fixed check and install script to require node 0.8.x for Bower support
+
 **V2.0.1**
 
 *    Fixed node $PATH issue
