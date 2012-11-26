@@ -150,6 +150,17 @@ dep_install() {
       export PATH="/usr/local/share/npm/bin:$PATH"
     fi
 
+    if [[ "$node" = 2 ]]; then
+      echo ""
+      echo -e $M"Updating Node... "
+      echo ""
+      brew update node
+      echo -e $M"Installing Node Package Manager"
+      sudo curl -O http://npmjs.org/install.sh | sh
+      export NODE_PATH="/usr/local/lib/node"
+      export PATH="/usr/local/share/npm/bin:$PATH"
+    fi
+
     if [[ "$grunt" = 0 ]]; then
 	  	echo ""
 	  	echo -e $M"Installing Grunt... "

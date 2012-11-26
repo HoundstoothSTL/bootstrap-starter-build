@@ -166,7 +166,7 @@ sysaudit() {
     desc_print "You'll need Grunt for this to work, once you have Node installed, do" "npm install -g grunt"
 
 
-  if [[ "$cli" = 0 || "$brew" = 0 || "$git" = 0 || "$node" = 0 || "$ruby" = 0 || "$gem" = 0 || "$grunt" = 0 || "$bower" = 0 ]]; then
+  if [[ "$cli" = 0 || "$brew" = 0 || "$git" = 0 || "$node" = 0 || "$node" = 2 || "$ruby" = 0  || "$ruby" = 2 || "$gem" = 0 || "$grunt" = 0 || "$bower" = 0 ]]; then
     
     echo ""
     echo -e $A"Looks like you're missing some needed packages."
