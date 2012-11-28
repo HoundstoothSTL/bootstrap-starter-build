@@ -103,7 +103,19 @@ else
 	cp -r *.css $projectPath/$projectName/app/styles/
 	cp -r img/* $projectPath/$projectName/app/images/ && rm -rf img
 	mkdir $projectPath/$projectName/app/styles/less && cd $projectPath/$projectName/app/styles/less && mkdir project
-	cd $projectPath/$projectName/app/styles/less/project && touch theme.less responsive.less variables.less 
+
+	# grab mixins.less and variables.less from bootstrap core and add to project less folder
+	cp $projectPath/$projectName/components/bootstrap/less/variables.less $projectPath/$projectName/app/styles/less/project/variables.less
+	cp $projectPath/$projectName/components/bootstrap/less/mixins.less $projectPath/$projectName/app/styles/less/project/mixins.less
+	cd $projectPath/$projectName/app/styles/less/project && touch theme.less responsive.less
+
+	cd $projectPath/$projectName/app/styles/less 
+    echo "
+    @import 'project/variables.less';
+    @import 'project/mixins.less';
+    @import 'project/theme.less';
+    @import 'project/responsive.less';
+    " > $projectName.less;
 fi
 
 if [[ "$bootstrapJS" =~ ^[Yy]$ ]]
