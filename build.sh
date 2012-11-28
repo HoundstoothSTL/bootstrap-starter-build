@@ -79,7 +79,23 @@ then
     cp -r $projectPath/$projectName/components/bootstrap/less/*.less $projectPath/$projectName/app/styles/less/bootstrap/
     cp -r $projectPath/$projectName/components/bootstrap/img/* $projectPath/$projectName/app/images/
     cp $projectPath/$projectName/app/styles/less/bootstrap/variables.less $projectPath/$projectName/app/styles/less/project/variables.less
-    cd $projectPath/$projectName/app/styles/less/project && touch theme.less responsive.less variables.less    
+    cd $projectPath/$projectName/app/styles/less/project && touch theme.less responsive.less mixins.less $projectName.less 
+    
+    cd $projectPath/$projectName/app/styles/less/project 
+    echo "
+    @import 'variables.less';
+    @import 'mixins.less';
+    @import 'theme.less';
+    @import 'responsive.less';
+    " > $projectName.less;
+
+    # create the main compiler - compiles bootstrap core, bootstrap responsive and project core
+    cd $projectPath/$projectName/app/styles/less 
+    echo "
+    @import 'bootstrap/bootstrap.less';
+    @import 'bootstrap/responsive.less';
+    @import 'project/$projectName.less';
+    " > core.less;   
 else 
 	mkdir $projectPath/$projectName/components/bootstrap-css && cd $projectPath/$projectName/components/bootstrap-css
 	curl -O http://twitter.github.com/bootstrap/assets/bootstrap.zip && unzip bootstrap.zip

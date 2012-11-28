@@ -50,6 +50,11 @@ Once you have run the check once and have everything you need, you can simply ru
 
 ## Changelog
 
+**V2.0.3**
+
+*    Setup some base compiler files in /app/styles/less/
+*	 Added a mixins.less file to the /app/styles/less/project directory
+
 **V2.0.2**
 
 *    Fixed check and install script to require node 0.8.x for Bower support
