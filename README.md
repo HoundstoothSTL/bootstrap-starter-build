@@ -1,6 +1,10 @@
 Bootstrap Project Build Script
 =======================
 
+## Update (08/11/2013)
+
+This repo is no longer maintained, feel free to fork it or use it as you like, but a lot of changes have been made to Bootstrap, Grunt, etc...
+
 ### Build out a new Bootstrap Scaffold using a simple shell script.
 
 The script will ask a few questions and then build out a LESS or non-LESS Bootstrap scaffold based on your answers.  This is a complete rewrite from version 1.0.  Version 2.0 utilizes a system audit to check your setup for neccessary packages like Node and Grunt as well as an installer for missing packages.  Some may notice that the audit is similar to the Yeoman audit and that is because it is similar, thanks to Yeoman for the idea for the check script.

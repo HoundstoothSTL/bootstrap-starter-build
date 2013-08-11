@@ -165,7 +165,7 @@ dep_install() {
 	  	echo ""
 	  	echo -e $M"Installing Grunt... "
 	  	echo ""
-	  	sudo npm install -g grunt
+	  	sudo npm install -g grunt-cli
     fi
 
     if [[ "$bower" = 0 ]]; then
